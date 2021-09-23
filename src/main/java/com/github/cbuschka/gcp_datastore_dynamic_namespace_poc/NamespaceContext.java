@@ -26,7 +26,7 @@ public class NamespaceContext {
   }
 
   public static String getCurrentNamespace() {
-    NamespaceContext context = threadLocalContextHolder.get();
+    var context = threadLocalContextHolder.get();
     if (context == null) {
       throw new IllegalStateException("No namespace context set.");
     }
